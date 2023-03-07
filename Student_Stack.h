@@ -1,5 +1,5 @@
 #pragma once
-#define MAX_STACK_SIZE 20
+#define MAX_STACK_SIZE 100
 #include "Student.h"
 #include <iostream>
 
@@ -29,7 +29,7 @@ public:
 		if (isFuLL()) { error("Error : Stack is FULL!!"); }
 		else {
 			top += 1;
-			data[top] = e;
+			data[top] = e; // 복사생성자, 대입연산자 오버로딩의 차이
 		}
 	}
 	Student pop() {

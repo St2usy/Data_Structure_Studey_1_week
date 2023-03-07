@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <cstring>
-#define MAX_STRING 100
 #pragma warning(disable:4996)
 
 class Student {
@@ -36,5 +35,21 @@ public:
 		id = rhs.id;
 		name = strdup(rhs.name);
 		dept = strdup(rhs.dept);
+	}
+	Student& operator=(const Student& rhs2) {
+		if (this == &rhs2) return *this;
+
+		delete name;
+		delete dept;
+
+		this->name = new char[strlen(rhs2.name) + 1];
+		this->dept = new char[strlen(rhs2.dept) + 1];
+
+		strcpy(this->name, rhs2.name);
+		strcpy(this->dept, rhs2.dept);
+
+		id = rhs2.id;
+
+		return *this;
 	}
 };
