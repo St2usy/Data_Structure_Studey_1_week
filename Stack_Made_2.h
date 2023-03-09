@@ -31,7 +31,7 @@ public:
 			data[top] = n;
 		}
 	}
-	int pop() {
+	int pop() { // 수식 변환 할때 char형으로 바꾼다.
 		if (isEmpty()) { error("Error :: Stack is Empty !!"); }
 		else {
 			int popdata = data[top];

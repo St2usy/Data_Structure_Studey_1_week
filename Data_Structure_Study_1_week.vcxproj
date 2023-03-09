@@ -128,12 +128,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="03장-CheckMatching.cpp" />
+    <ClCompile Include="3장-EvalPostfixMain.cpp" />
+    <ClCompile Include="Intfix2Postfix.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MazeEscape.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="OperandStack.h" />
     <ClInclude Include="Stack_Made_2.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Student_Stack.h" />
+    <ClInclude Include="Location2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
